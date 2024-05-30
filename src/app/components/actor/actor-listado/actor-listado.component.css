@@ -1,0 +1,39 @@
+.listado-peliculas {
+    width: 100%;
+    height: auto;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.funciones-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.funciones-container div {
+    margin: 0px 5%; /* Utilizando porcentaje en lugar de valor fijo en píxeles */
+}
+
+.funciones-container h1 {
+    top: 0;
+    width: 100%;
+    background-color: white; /* Opcional: para asegurar que el fondo del h1 sea blanco */
+    z-index: 1;
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .listado-peliculas,
+    .funciones-container {
+        padding: 30px 2%; /* Modifica el padding para tamaños de pantalla más pequeños */
+    }
+
+    .funciones-container div {
+        margin: 0px 2%; /* Modifica el margen para tamaños de pantalla más pequeños */
+    }
+}

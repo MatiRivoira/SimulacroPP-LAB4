@@ -1,0 +1,35 @@
+.peliculas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pelicula-card {
+    position: relative;
+    width: 200px;
+}
+
+.datos-pelis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.datos-pelis p {
+    margin: 0;
+}
+
+.datos-pelis .nombre {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.datos-pelis .fecha {
+    font-size: 1em;
+}

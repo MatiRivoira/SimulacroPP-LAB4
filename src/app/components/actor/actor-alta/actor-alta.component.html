@@ -1,0 +1,32 @@
+<div class="actor-form-container">
+    <h2>Alta de Actores</h2>
+    <form (ngSubmit)="guardarActor()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" [(ngModel)]="apellido" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" [(ngModel)]="direccion" required>
+        
+        <label for="direccion2">Dirección 2:</label>
+        <input type="text" id="direccion2" name="direccion2" [(ngModel)]="direccion2">
+        
+        <label for="pais">Pais:</label>
+        <select id="pais" name="paisNatal" required>
+            <app-tabla-paises (paisSeleccionado)="seleccionarPais($event)"></app-tabla-paises>
+        </select>
+
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="localidad" name="localidad" [(ngModel)]="localidad" required>
+        
+        <label for="postalCode">Código Postal:</label>
+        <input type="text" id="postalCode" name="postalCode" [(ngModel)]="postalCode" required>
+        
+        <button type="submit">Guardar</button>
+    </form>
+</div>

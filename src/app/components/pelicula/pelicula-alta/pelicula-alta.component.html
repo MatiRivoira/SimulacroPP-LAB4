@@ -1,0 +1,37 @@
+<div style="display: flex;
+flex-direction: row;
+align-content: center;
+justify-content: center;
+align-items: center; width: 100%;">
+    <form [formGroup]="peliculaForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" formControlName="nombre" />
+        </div>
+        <div>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" formControlName="tipo">
+                <option value="terror">Terror</option>
+                <option value="comedia">Comedia</option>
+                <option value="amor">Amor</option>
+                <option value="otros">Otros</option>
+            </select>
+        </div>
+        <div>
+            <label for="fechaEstreno">Fecha de Estreno:</label>
+            <input type="date" id="fechaEstreno" formControlName="fechaEstreno" />
+        </div>
+        <div>
+            <label for="cantidadPublico">Cantidad de Público:</label>
+            <input type="number" id="cantidadPublico" formControlName="cantidadPublico" min="0"/>
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto:</label>
+            <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+            <img [src]="imagenSeleccionada" *ngIf="imagenSeleccionada" width="150px" height="150px" alt="Foto seleccionada">
+        </div>
+        <button type="submit" [disabled]="!peliculaForm.valid">Guardar</button>
+    </form>
+    <app-tabla-actor class="tablaActores" (actorSeleccionado)="actualizarActor($event)"></app-tabla-actor>
+</div>
+

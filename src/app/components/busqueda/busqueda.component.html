@@ -1,0 +1,11 @@
+<div class="listado-peliculas">
+    <app-tabla-pelicula [peliculas]="peliculas$" (peliculaSeleccionada)="actualizarDetallePelicula($event)"></app-tabla-pelicula>
+</div>
+<div class="funciones-container">
+    <div><h1>Para borrar</h1></div>
+    <div><h1>Para modificar</h1></div>
+    <div>
+        <h1>Para mostrar</h1>
+        <app-detalle-pelicula [pelicula]="peliculaSeleccionada"></app-detalle-pelicula>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="actores-grid">
+    <div 
+      class="actor-card" 
+      *ngFor="let actor of actores | async" 
+      (click)="selectActor(actor)" 
+      [class.selected]="actor === selectedActor"> <!-- Nuevo -->
+      <div class="datos-actor">
+        <p>{{actor.nombre}}</p>
+        <p>{{ actor.apellido}}</p>
+      </div>
+    </div>
+  </div>
+  

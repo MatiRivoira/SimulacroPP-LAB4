@@ -1,0 +1,16 @@
+<div class="listado-peliculas">
+    <app-tabla-actor class="tablaActores" (actorSeleccionado)="actualizarActor($event)"></app-tabla-actor>
+</div>
+<div class="funciones-container">
+    <div>
+        <h1>Peliculas en las que actua</h1>
+        @if (actorSeleccionado && actorSeleccionado.id) {
+            <app-actor-peliculas [actorId]="actorSeleccionado.id"></app-actor-peliculas>
+        }
+    </div>
+    <div><h1>Detalle pais</h1></div>
+    <div>
+        <h1>Detalle actor</h1>
+        <app-detalle-actor [actor]="actorSeleccionado"></app-detalle-actor>
+    </div>
+</div>

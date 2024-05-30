@@ -1,0 +1,36 @@
+.actores-grid {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px; /* Ajusta esta altura según tus necesidades */
+    width: 400px;
+    overflow-y: auto;
+    padding: 10px; /* Añade padding para espaciar el contenido del borde */
+}
+
+.actor-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Espacio entre las tarjetas de actores */
+    padding: 10px; /* Añade padding interno */
+    border: 1px solid #ddd; /* Añade un borde alrededor de cada tarjeta */
+    border-radius: 5px; /* Bordes redondeados para las tarjetas */
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave al pasar por encima */
+}
+
+.actor-card:hover {
+    background-color: #f0f0f0; /* Cambio de fondo al pasar por encima */
+}
+
+.actor-card.selected { /* Nuevo */
+    background-color: #cce5ff; /* Color de fondo para el actor seleccionado */
+    border-color: #007bff; /* Color de borde para el actor seleccionado */
+}
+
+.datos-actor p {
+    margin: 0; /* Quita el margen por defecto de los párrafos */
+    padding: 5px 0; /* Añade padding vertical para separar el texto */
+    font-size: 14px; /* Ajusta el tamaño de fuente */
+    color: #333; /* Color del texto */
+}

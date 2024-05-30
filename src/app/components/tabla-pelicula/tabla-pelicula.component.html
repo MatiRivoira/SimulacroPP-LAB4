@@ -1,0 +1,9 @@
+<div class="peliculas-grid">
+    <div class="pelicula-card" *ngFor="let pelicula of peliculas | async" (click)="seleccionarPelicula(pelicula)">
+        <img [src]="pelicula.foto" alt="{{pelicula.nombre}}" style="width: 100%; height: 100%;">
+        <div class="datos-pelis">
+            <p>{{pelicula.nombre}}</p>
+            <p>{{ pelicula.fechaEstreno}}</p>
+        </div>
+    </div>
+</div>
